@@ -18,7 +18,7 @@ const movies = [
         name: 'Home Alone 4',
         genre: 'Funny',
         year: '2002'
-    }, 
+    }
 ]
 
 export default movies;
