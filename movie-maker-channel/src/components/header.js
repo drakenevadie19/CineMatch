@@ -12,7 +12,7 @@ const HeaderComponent = () => {
             <a href='/#'>Movie Channel</a>
             <Link smooth to='#addNewMovie' className='add-button' onClick={addMovie}>Add Movie</Link>
         </div>
-     );
+    );
 }
- 
+
 export default HeaderComponent;
