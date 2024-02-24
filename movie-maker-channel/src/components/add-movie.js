@@ -5,7 +5,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 //Form to add new movie 
 const AddMovie = () => {
     return ( 
-        <div className='addMovie'>
+        <div className='addMovie' id="addNewMovie">
             <form>
                 <input type='text' placeholder='Movie Name' required/>
                 <input type='text' placeholder='Movie Name' required/>
@@ -15,7 +15,7 @@ const AddMovie = () => {
             </form>
 
             <div className='top'>
-                <Link smooth to='/#' className='top-button'>Back to Top</Link>
+                <Link smooth to='#header' className='top-button'>Back to Top</Link>
             </div>
         </div>
     );
