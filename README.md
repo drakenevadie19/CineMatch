@@ -1,0 +1,14 @@
+- TechStack: 
+  - Front-End: 
+      - React.js
+      - Redux
+      - HTML + CSS
+      - Node.js
+      - JavaScript
+  - Back-end: 
+      - Express.js
+      - Node.js
+  - Database: 
+      - Mongo DB
+      - Mongoose 
+      - MongoDB Atlas hosting
