@@ -5,7 +5,8 @@ const mongoose = require("mongoose");
 
 const { graphqlHTTP } = require('express-graphql');
 
-var { buildSchema } = require("graphql")
+const resolvers = require('./resolvers/resolvers')
+const schema = require('./schema/schema');
 
 app.get('/hi', (req, res) => {
     res.send('Hello from express server');
@@ -21,55 +22,9 @@ mongoose.connect("mongodb+srv://thanhnguyen14gers:csz0dMPbQB1HcEF9@movie-maker-a
         console.log('Error:', err);
     });
 
-const movies = [
-    {
-        name: 'Home Alone 1',
-        genre: 'Funny',
-        year: '1990'
-    },
-    {
-        name: 'Home Alone 2',
-        genre: 'Funny',
-        year: '1992'
-    },
-    {
-        name: 'Home Alone 3',
-        genre: 'Funny',
-        year: '1997'
-    },
-    {
-        name: 'Home Alone 4',
-        genre: 'Funny',
-        year: '2002'
-    }
-]
-
-var schema = buildSchema(`
-    type Query {
-        listmovie: [Movie]
-    }
-
-    type Movie {
-        name: String, 
-        genre: String, 
-        year: String
-    }
-`)
-
-var rootValue = { 
-    listmovie: () => {
-        return movies;
-    }, 
-    hello: () => "Hello World"
-};
-
-// graphql({ schema, source, rootValue }).then(response => {
-//     console.log(response)
-// })
-
 app.use('/hello', graphqlHTTP({
-    schema, 
-    rootValue,
+    schema: schema, 
+    rootValue : resolvers,
     graphiql: true
 }))
 
