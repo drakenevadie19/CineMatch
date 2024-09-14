@@ -5,8 +5,8 @@ const mongoose = require("mongoose");
 
 const { graphqlHTTP } = require('express-graphql');
 
-const resolvers = require('./resolvers/resolvers')
-const schema = require('./schema/schema');
+const movieResolvers = require('./resolvers/resolvers')
+const movieSchema = require('./schema/schema');
 
 // Connect BE to MongoDB Atlas DB
 // No need useNewURLParser and useUnifiedTopology parameters, because they are deprecated.
@@ -23,8 +23,8 @@ app.get('/hi', (req, res) => {
 });
 
 app.use('/hello', graphqlHTTP({
-    schema: schema, // Format of question and answer
-    rootValue : resolvers, // Answer response from server  
+    schema: movieSchema, // Format of question and answer
+    rootValue : movieResolvers, // Answer response from server  
     graphiql: true // Check the queries over API
 }))
 
