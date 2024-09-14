@@ -3,11 +3,14 @@
       - React.js
       - Redux
       - HTML + CSS
-      - Node.js
       - JavaScript
+      - Apollo Client
   - Back-end: 
+      - GraphQL 
       - Express.js
       - Node.js
+      - CORS
+      - JSON Server
   - Database: 
       - Mongo DB
       - Mongoose 
