@@ -4,15 +4,28 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// AppoloClient: dependency (service)
+// InMemoryCache: Appllo client can use cached memory for fetching queries or re-fetching them
+// ApolloProvider: wrap appolo
+// gql: Allow use to write the queries inside our FE application
+import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
+
 import { BrowserRouter as Router } from 'react-router-dom';
+const apolloClient = new ApolloClient({
+  uri: 'http://localhost:8000/hello',
+  cache: new InMemoryCache(),
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
-  </React.StrictMode>
+  // Apollo Provider will use this client, and allow us to fire the queries from FE to BE
+  <ApolloProvider client={apolloClient}>
+    <React.StrictMode>
+      <Router>
+        <App />
+      </Router>
+    </React.StrictMode>
+  </ApolloProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
