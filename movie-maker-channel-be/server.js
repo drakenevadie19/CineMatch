@@ -8,6 +8,8 @@ const { graphqlHTTP } = require('express-graphql');
 const movieResolvers = require('./resolvers/resolvers')
 const movieSchema = require('./schema/schema');
 
+const cors = require('cors');
+
 // Connect BE to MongoDB Atlas DB
 // No need useNewURLParser and useUnifiedTopology parameters, because they are deprecated.
 mongoose.connect("mongodb+srv://thanhnguyen14gers:csz0dMPbQB1HcEF9@movie-maker-app.9l1xvlj.mongodb.net/?retryWrites=true&w=majority&appName=movie-maker-app")
@@ -22,7 +24,10 @@ app.get('/hi', (req, res) => {
     res.send('Hello from express server');
 });
 
-app.use('/hello', graphqlHTTP({
+// Allow cross-origin communication
+app.use(cors());
+
+app.use('/getAllMovies', graphqlHTTP({
     schema: movieSchema, // Format of question and answer
     rootValue : movieResolvers, // Answer response from server  
     graphiql: true // Check the queries over API

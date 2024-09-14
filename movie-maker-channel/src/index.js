@@ -8,12 +8,12 @@ import reportWebVitals from './reportWebVitals';
 // InMemoryCache: Appllo client can use cached memory for fetching queries or re-fetching them
 // ApolloProvider: wrap appolo
 // gql: Allow use to write the queries inside our FE application
-import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 import { BrowserRouter as Router } from 'react-router-dom';
 const apolloClient = new ApolloClient({
-  uri: 'http://localhost:8000/hello',
-  cache: new InMemoryCache(),
+  uri: 'http://localhost:8000/getAllMovies',
+  cache: new InMemoryCache(), 
 });
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
