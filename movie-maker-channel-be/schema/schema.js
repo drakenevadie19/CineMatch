@@ -1,10 +1,10 @@
-var { buildSchema } = require("graphql")
+var { graphql, buildSchema } = require("graphql")
 
 const schema = buildSchema(`
     type Query {
-        listmovie: [Movie]
-    }
-
+        listMovies: [Movie]
+    }  
+ 
     type Mutation {
         addMovie(name: String!, genre: String!, year: String!): Movie 
     }

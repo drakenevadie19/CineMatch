@@ -22,8 +22,10 @@ const movies = [
     }
 ]
 
+// Answer Schema
 const resolvers = { 
-    listmovie: () => {
+    // When being reached out, it will return a listMovies array/list, which contains of many Movie objects, each contain 3 fields: name, genre and year 
+    listMovies: () => {
         return movies;
     }, 
     hello: () => "Hello World",
@@ -33,7 +35,7 @@ const resolvers = {
             name: args.name, 
             genre: args.genre, 
             year: args.year
-        }
+        } 
     }
 };
 
