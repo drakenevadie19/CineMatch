@@ -28,7 +28,9 @@ const MovieContainer = () => {
 
     if (loading) return <p className='loading'>Loading...</p>;
     if (error) return <p className='error'>Error : {error.message}</p>;
-  
+    if (data.listMovies.length === 0) { // The DB is empty
+        <p className='no-movies'>The Database is currently empty</p>
+    }
 
     return ( 
         <div className='movies'>
