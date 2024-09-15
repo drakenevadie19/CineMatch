@@ -25,7 +25,6 @@
 
 const mongoModel = require('../models/model');
 
-
 const resolvers = { 
     // When being reached out, it will return a listMovies array/list, which contains of many Movie objects, each contain 3 fields: name, genre and year 
     listMovies: () => {
