@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 
+require('dotenv').config();
+
 const mongoose = require("mongoose");
 
 const { graphqlHTTP } = require('express-graphql');
@@ -12,7 +14,7 @@ const cors = require('cors');
 
 // Connect BE to MongoDB Atlas DB
 // No need useNewURLParser and useUnifiedTopology parameters, because they are deprecated.
-mongoose.connect("mongodb+srv://thanhnguyen14gers:csz0dMPbQB1HcEF9@movie-maker-app.9l1xvlj.mongodb.net/?retryWrites=true&w=majority&appName=movie-maker-app")
+mongoose.connect(`mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@movie-maker-app.9l1xvlj.mongodb.net/?retryWrites=true&w=majority&appName=movie-maker-app`)
     .then(() => {
         console.log("Successfully connect to MongoDB");
     })
