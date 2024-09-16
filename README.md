@@ -1,24 +1,30 @@
 - Responsibilities:
-  - Utilizing GraphQL to minimize redundant data transdering between front-end and back-end. There are currently 2 fields using GraphQL: 
-      - Query: Get list of all movies storing in the MongoDB Database, bind those data to Front-end to display through Apollo Client (https://www.apollographql.com/docs/react/data/queries/).
-      - Mutation: Add a new movie to the database, also through Apollo Client (https://www.apollographql.com/docs/react/data/mutations), and update list of available movies dynamically. 
-  - Storing list of movies, and archieving them when needed through mongoose tool and MongoDB. 
-  - Using MERN Stacks (MongoDB, Express.js, React.js, and Node.js) to host all services of the website. 
+    - Utilizing GraphQL to minimize redundant data transdering between front-end and back-end. There are currently 2 fields using GraphQL: 
+        - Query: Get list of all movies storing in the MongoDB Database, bind those data to Front-end to display through Apollo Client (https://www.apollographql.com/docs/react/data/queries/).
+        - Mutation: Add a new movie to the database, also through Apollo Client (https://www.apollographql.com/docs/react/data/mutations), and update list of available movies dynamically. 
+    - Dividing into 2 dashboards for ordinary visitors and admin.
+        - Visitors can: 
+            - View best rating movies
+            - Comment on each movies based on experiences (Login required)
+        - Admin can:
+            - Managing movies in database (Adding new movie, delete movie(s), and modify details of movie)
+    - Storing list of movies, and archieving them when needed through mongoose tool and MongoDB. 
+    - Using MERN Stacks (MongoDB, Express.js, React.js, and Node.js) to host all services of the website. 
 
 - TechStack: 
-  - Front-End: 
-      - React.js
-      - Redux
-      - HTML + CSS
-      - JavaScript
-      - Apollo Client
-  - Back-end: 
-      - GraphQL 
-      - Express.js
-      - Node.js
-      - CORS
-      - JSON Server
-  - Database: 
-      - Mongo DB
-      - Mongoose 
-      - MongoDB Atlas hosting
+    - Front-End: 
+        - React.js
+        - Redux
+        - HTML + CSS
+        - JavaScript
+        - Apollo Client
+    - Back-end: 
+        - GraphQL 
+        - Express.js
+        - Node.js
+        - CORS
+        - JSON Server
+    - Database: 
+        - Mongo DB
+        - Mongoose 
+        - MongoDB Atlas hosting
