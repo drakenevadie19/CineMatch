@@ -4,7 +4,7 @@ const MovieIndividual = ({ movie }) => {
     return ( 
         <div className='card'>
             <div className='container'>
-                <h2>{movie.name}</h2>
+                <h2>{movie.title}</h2>
                 <h4>{movie.genre}</h4>
                 <h4>{movie.year}</h4>
             </div>

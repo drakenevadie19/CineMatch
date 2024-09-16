@@ -4,15 +4,44 @@ import MovieIndividual from '../components/movie-individual';
 // import movies from './movie-dummy-data';
 import { gql, useQuery } from '@apollo/client';
 
+// Old schema for old MongoDB Collection
+// const listAllMovies = gql`
+//     query {
+//         listMovies {
+//             name
+//             genre
+//             year
+//         }
+//     }
+// `
+
 // Define variable containing list of all movies
 // Schema for queries, as syntax in GraphiQL
 // When this component is render, firing this query
 const listAllMovies = gql`
     query {
-        listMovies {
-            name
-            genre
-            year
+        listMovies{
+            title,
+            year,
+            rated,
+            released,
+            runtime,
+            genre,
+            director,
+            writer,
+            actors,
+            plot,
+            language,
+            country,
+            awards,
+            poster,
+            type,
+            images,
+            rates {
+                metaScore,
+                imdbRating,
+                imdbVotes
+            }
         }
     }
 `
