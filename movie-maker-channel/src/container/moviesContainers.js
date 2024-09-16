@@ -21,6 +21,7 @@ import { gql, useQuery } from '@apollo/client';
 const listAllMovies = gql`
     query {
         listMovies{
+            _id
             title,
             year,
             rated,

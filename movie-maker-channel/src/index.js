@@ -10,7 +10,7 @@ import reportWebVitals from './reportWebVitals';
 // gql: Allow use to write the queries inside our FE application
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
-import { BrowserRouter as Router } from 'react-router-dom';
+// import { BrowserRouter as Router } from 'react-router-dom';
 const apolloClient = new ApolloClient({
   uri: 'http://localhost:8000/getAllMovies',
   cache: new InMemoryCache(), 
@@ -21,9 +21,7 @@ root.render(
   // Apollo Provider will use this client, and allow us to fire the queries from FE to BE
   <ApolloProvider client={apolloClient}>
     <React.StrictMode>
-      <Router>
         <App />
-      </Router>
     </React.StrictMode>
   </ApolloProvider>
 );

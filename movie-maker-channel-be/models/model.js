@@ -15,6 +15,8 @@ const mongoose = require('mongoose');
 // Schema = a predefined format or a pattern just like we have with the queries
 const mongoSchema = new mongoose.Schema({ 
     // Arguments are data that we want to provide to store in the schema
+    _id: mongoose.Schema.Types.ObjectId,  // Explicitly include _id as ObjectId
+    id: String,
     title: String,
     year: String,
     rated: String,
