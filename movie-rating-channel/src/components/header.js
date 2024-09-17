@@ -9,7 +9,7 @@ const addMovie = () => {
 const HeaderComponent = () => {
     return ( 
         <div className='topnav' id="header">
-            <a href='/#'>Movie Channel</a>
+            <a href='/#'>Movie Rating Channel</a>
             <Link smooth to='#addNewMovie' className='add-button' onClick={addMovie}>Add Movie</Link>
         </div>
     );

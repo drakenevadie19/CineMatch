@@ -54,7 +54,7 @@ const MovieContainer = () => {
     //  error: if the query is failed
     //  loading: when the query is still processing, maybe because of low network
     const { loading, error, data } = useQuery(listAllMovies);
-    console.log(data);
+    // console.log(data);
 
     if (loading) return <p className='loading'>Loading...</p>;
     if (error) return <p className='error'>Error : {error.message}</p>;

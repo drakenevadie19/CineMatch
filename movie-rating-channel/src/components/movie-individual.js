@@ -2,7 +2,13 @@ import React from 'react';
 
 const MovieIndividual = ({ movie }) => {
     return ( 
-        <div className='card'>
+        <div 
+            className='card' 
+            style={{
+                background:`url(${movie.poster})`,
+                backgroundSize: "100%"
+            }}
+        >
             <div className='container'>
                 <h2>{movie.title}</h2>
                 <h4>{movie.genre}</h4>
