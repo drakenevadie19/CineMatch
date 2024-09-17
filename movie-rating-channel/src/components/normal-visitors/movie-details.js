@@ -47,6 +47,7 @@ const MovieDetail = () => {
     return (
         <>
             <h1>Movie details</h1>
+            <img src={data.getMovie.poster} alt="poster"></img>
             <div style={{color: "white"}}>
                 <h2>{data.getMovie.title}</h2>
                 <p>{data.getMovie.genre}</p>
