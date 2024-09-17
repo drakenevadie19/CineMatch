@@ -26,6 +26,9 @@
 const mongoModel = require('../models/model');
 
 const resolvers = { 
+    getMovie: ({ movieTitle }) => {
+        return mongoModel.findOne({ title: movieTitle });
+    },
     // When being reached out, it will return a listMovies array/list, which contains of many Movie objects, each contain 3 fields: name, genre and year 
     listMovies: () => {
         return mongoModel.find({}); // Find everything inside this model

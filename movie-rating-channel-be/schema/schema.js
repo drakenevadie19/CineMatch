@@ -20,6 +20,7 @@ var { buildSchema } = require("graphql")
 const schema = buildSchema(`
     type Query {
         listMovies: [Movie]
+        getMovie(movieTitle: String!): Movie
     }    
 
     type Movie {

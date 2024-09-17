@@ -1,8 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-
-
 const MovieIndividual = ({ movie }) => {
     const navigate = useNavigate();
 
@@ -10,13 +8,11 @@ const MovieIndividual = ({ movie }) => {
     let toFindMovieName = "";
     if (movieName.length > 1) {
         for (let i=0;i<movieName.length;i++) {
-            toFindMovieName += movieName[i] + "*";
+            toFindMovieName += movieName[i] + "%20";
         }
     }
-    toFindMovieName = toFindMovieName.substring(0,toFindMovieName.length-1);
+    // toFindMovieName = toFindMovieName.substring(0,toFindMovieName.length-1);
     
-    
-
     return ( 
         <div 
             className='card' 
