@@ -1,5 +1,5 @@
 - Responsibilities:
-    - Utilizing GraphQL to minimize redundant data transdering between front-end and back-end. There are currently 2 fields using GraphQL: 
+    - Utilizing GraphQL to minimize redundant data transdering between front-end and back-end. There are currently 2 fields using GraphQL (https://graphql.org/community/tools-and-libraries/?tags=javascript_server#javascript): 
         - Query: Get list of all movies storing in the MongoDB Database, bind those data to Front-end to display through Apollo Client (https://www.apollographql.com/docs/react/data/queries/).
         - Mutation: Add a new movie to the database, also through Apollo Client (https://www.apollographql.com/docs/react/data/mutations), and update list of available movies dynamically. 
     - Dividing into 2 dashboards for ordinary visitors and admin.
