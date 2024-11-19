@@ -9,7 +9,8 @@
         - Admin can:
             - Managing movies in database (Adding new movie, delete movie(s), and modify details of movie)
     - Storing list of movies, and archieving them when needed through mongoose tool and MongoDB. 
-    - Using MERN Stacks (MongoDB, Express.js, React.js, and Node.js) to host all services of the website. 
+    - Using MERN Stacks (MongoDB, Express.js, React.js, and Node.js) to host all services of the website.
+    - Loading data from: https://github.com/drakenevadie19/movie-channel-data
 
 - TechStack: 
     - Front-End: 
