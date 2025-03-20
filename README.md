@@ -25,6 +25,7 @@
 - Loading data from: https://github.com/drakenevadie19/movie-channel-data
 
 <h2>TechStack</h2>
+
 - Front-End: 
     - React.js
     - Redux
