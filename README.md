@@ -24,20 +24,20 @@
 - Using MERN Stacks (MongoDB, Express.js, React.js, and Node.js) to host all website services.
 - Loading data from: https://github.com/drakenevadie19/movie-channel-data
 
-- TechStack: 
-    - Front-End: 
-        - React.js
-        - Redux
-        - HTML + CSS
-        - JavaScript
-        - Apollo Client
-    - Back-end: 
-        - GraphQL 
-        - Express.js
-        - Node.js
-        - CORS
-        - JSON Server
-    - Database: 
-        - Mongo DB
-        - Mongoose 
-        - MongoDB Atlas hosting
+<h2>TechStack</h2>
+- Front-End: 
+    - React.js
+    - Redux
+    - HTML + CSS
+    - JavaScript
+    - Apollo Client
+- Back-end: 
+    - GraphQL 
+    - Express.js
+    - Node.js
+    - CORS
+    - JSON Server
+- Database: 
+    - Mongo DB
+    - Mongoose 
+    - MongoDB Atlas hosting
