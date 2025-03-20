@@ -1,4 +1,4 @@
-#CineMatch
+<h1>CineMatch</h1>
 CineMatch = Combination between "Cinema" and "Match" to highlight movie recommendations.
 - Descriptions:
     - CineMatch is a smart movie discovery app that helps users find the perfect film based on their watch history and preferences.
