@@ -1,25 +1,27 @@
-# Step 1: Build Front-End
-FROM node:18 AS frontend-build
-WORKDIR /app
-CMD [ "pwd" ]
-COPY movie-rating-channel/ .
-RUN npm install
-RUN npm run build
+# Use official Node.js LTS version as base image
+FROM node:18 AS backend
 
-# Step 2: Build Back-End
-FROM node:18
+# Set working directory
 WORKDIR /app
+
+# Copy package.json and package-lock.json first (for better caching)
 COPY package*.json ./
-RUN npm install
 
-# Copy back-end code
+# Install dependencies
+RUN npm install --production
+
+# Copy the entire back-end code
 COPY . .
 
-# Copy front-end build to back-end `public` folder
-COPY --from=frontend-build /app/build /app/public/build
+# Set environment variable
+ENV NODE_ENV=production
 
-# Expose the port
+# Expose necessary port
 EXPOSE 8000
 
+# Use a non-root user for security
+RUN useradd --create-home appuser
+USER appuser
+
 # Start the server
-CMD ["npm", "start"]
+CMD ["npm", "run", "dev"]

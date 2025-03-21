@@ -5,8 +5,6 @@ require('dotenv').config();
 
 const mongoose = require("mongoose");
 
-const path = require("path");
-
 const { graphqlHTTP } = require('express-graphql');
 
 const movieResolvers = require('./resolvers/resolvers')
@@ -37,16 +35,8 @@ app.use('/getAllMovies', graphqlHTTP({
     graphiql: true // Check the queries over API
 }))
 
-// Serve static files from the React build folder
-app.use(express.static(path.join(__dirname, "public/build")));
-
-// Catch-all route to serve React app for any other request
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "public/build", "index.html"));
-});
 
 // When server run on port, it can listen
-const PORT = process.env.PORT || 8000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+app.listen('8000', () => {
+    console.log('Server is running on port 8000');
+})
